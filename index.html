@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head> 
-        <title> </title>
+        <title>Jose </title>
         <meta charset="utf-8">
+        <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
     Jose Perez 
-
-<section><h1>About</h1></section>
+    <header>
+      <h1 id="nav-title">Welcome to my website</h1>
+      <nav>
+          <ul>
+              <li><a href="#About">About</a></li>
+              <li><a href="#Experience">Experience</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#Connect">Connect</a></li>
+              <li><a href="#LeaveMessage">Leave a Message</a></li>
+              <li><a href="#messages">Connect</a></li>
+          </ul>
+      </nav>
+  </header>
+<section class="About" id="About"><h1>About</h1></section>
 
 <p>Im Jose and I currently live in Dallas. In my free time I practice 
     my guitar and workout in the gym to stay active. I used to wrestle in high
@@ -17,21 +30,23 @@
     school and it has taught me that nothing is hard as long as you have a 
     strong mind.</p>
 
-<Section><h2>Experience</h2></Section>
+
+<Section id="Experience" class="Experience"><h2>Experience</h2></Section>
 <ol>
-  <li>Painted and remodeled homes</li>
-  <li>Worked as a cashier</li>
-  <li>Working at UTD in janitorial services </li>
+  <li class="e">Painter</li>
+  <li class="e">Home Remodelation</li>
+  <li class="e">Worked as a cashier</li>
+  <li class="e">Working at UTD in janitorial services </li>
 </ol>
 <section id="skills"><h2>Skills</h2>
   <ul></ul>
 </section>
-<Section><h3>Connect</h3></Section>
+<Section id="Connect"><h3>Connect</h3></Section>
 
-jfpm379@gmail.com
-<a href="https://github.com/j0sePrz">click me</a>
+<p class="gmail">jfpm379@gmail.com
+<a href="https://github.com/j0sePrz">click me</a></p>
 
-<section>
+<section id="LeaveMessage">
   <h2>Leave a Message</h2> 
    <form name = "leave_message"> 
      <label>Name:</label> <br>
@@ -44,7 +59,7 @@ jfpm379@gmail.com
    </form>
 </section>
 
-<section id = "messages">
+<section id ="messages">
   <h2>Messages</h2>
   <ul></ul>
 </section>
@@ -52,4 +67,3 @@ jfpm379@gmail.com
 <footer></footer>
 <script src="js/index.js"defer></script>
 </body>
-</html>
