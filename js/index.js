@@ -61,3 +61,23 @@ function onRemoveButtonClick(event){
     const entry = event.target.parentNode;
     entry.remove()
 }
+
+fetch('https://api.github.com/users/j0sePrz/repos')
+    .then((response) => response.json())
+    .then(afterResponse)
+    .catch(handleErrors);
+
+    function afterResponse(response) {
+        for (let i = 0; i < response.length; i++) {
+            let project = document.createElement("li");
+            project.innerHTML = response[i].name;
+            project.classList.add("projects");
+            projects.appendChild(project);
+        }
+    }
+    function handleErrors (error) {
+        console.log("Unable to load Github API", error);
+        let item = document.createElement("li");
+        item.innerHTML = "Unable to load responsitories. Please try again later.";
+        projects.appendChild(item);
+    }
