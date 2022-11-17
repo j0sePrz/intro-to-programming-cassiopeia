@@ -81,3 +81,25 @@ fetch('https://api.github.com/users/j0sePrz/repos')
         item.innerHTML = "Unable to load responsitories. Please try again later.";
         projects.appendChild(item);
     }
+let githubRequest = new XMLHttpRequest();
+githubRequest.open("GET","https://api.github.com/users/j0sePrz/repos")
+githubRequest.send();
+
+githubRequest.addEventListener('load',CallBackFunction);
+let repositories = []
+
+function CallBackFunction(event) {
+    repositories = JSON.parse(this.response);
+    console.log(repositories);
+    
+    let projectSection = document.getElementById("projects");
+    let projectList = projectSection.querySelector("ul");
+
+    for(let i=0; i < repositories.length; i++){
+
+    let project = document.createElement("li");
+    project.innerText = repositories[i].name;
+    projectList.appendChild(project);
+    }
+
+}
